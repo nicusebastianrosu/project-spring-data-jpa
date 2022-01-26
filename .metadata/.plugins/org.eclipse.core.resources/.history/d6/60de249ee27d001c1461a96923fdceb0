@@ -1,0 +1,5 @@
+package com.sdacademy.projectwithpersistence.persistence.model;
+
+public class Task {
+
+}

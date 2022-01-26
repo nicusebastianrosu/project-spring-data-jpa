@@ -1,0 +1,18 @@
+package com.sdacademy.projectwithpersistence;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ProjectWithPersistenceApplication implements ApplicationRunner {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectWithPersistenceApplication.class);
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProjectWithPersistenceApplication.class, args);
+	}
+
+}

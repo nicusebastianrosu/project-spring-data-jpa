@@ -1,0 +1,31 @@
+package com.sdacademy.projectwithpersistence.persistence.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class User {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(unique = true, nullable = false, updatable = false)
+	private String email;
+
+	private String firstName;
+
+	private String lastName;
+
+	public User(String email, String firstName, String lastName) {
+		super();
+		this.email = email;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	
+	
+}

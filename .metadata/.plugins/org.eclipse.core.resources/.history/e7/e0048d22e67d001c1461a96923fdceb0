@@ -1,0 +1,5 @@
+package com.sdacademy.projectwithpersistence.persistence.repository;
+
+public class ProjectRepository extends CrudRepository<Project, Long> {
+
+}

@@ -1,0 +1,31 @@
+package com.sdacademy.projectwithpersistence.persistence.model;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Task {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String name;
+
+	private String description;
+
+	private LocalDate dueDate;
+
+	private TaskStatus status;
+
+	@ManyToOne(optional = false)
+	private Project project;
+
+	@ManyToOne
+	private User assignee;
+}
